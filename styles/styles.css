@@ -1,3 +1,24 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#loading-container {
+  height: 100%;
+}
+#loading-container #top-load-section {
+  height: 38%;
+  background-color: #FDFFE3;
+}
+#loading-container #bottom-load-section {
+  height: 62%;
+  background-color: #000000;
+  color: #fff;
+}
 
 /*# sourceMappingURL=styles.css.map */
