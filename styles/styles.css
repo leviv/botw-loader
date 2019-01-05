@@ -15,6 +15,71 @@ body, html {
   height: 38%;
   background-color: #FDFFE3;
 }
+#loading-container #top-load-section #top-content {
+  height: 100%;
+  position: relative;
+}
+#loading-container #top-load-section #top-content #loading-title {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+}
+#loading-container #top-load-section #top-content #statistics {
+  float: right;
+  text-align: right;
+  height: 100%;
+  padding-right: 40px;
+}
+#loading-container #top-load-section #top-content #statistics #hearts {
+  width: 290px;
+  margin: 0 !important;
+}
+#loading-container #top-load-section #top-content #statistics #hearts img {
+  width: 15px;
+  height: auto;
+}
+#loading-container #top-load-section #top-content #statistics #stamina img {
+  width: 18px;
+  height: auto;
+}
+#loading-container #top-load-section #top-content #statistics #spirit-orbs img, #loading-container #top-load-section #top-content #statistics #shrine img {
+  width: 20px;
+  height: auto;
+  padding-left: 5px;
+}
+#loading-container #top-load-section #top-content #statistics #korok img {
+  width: 18px;
+  height: auto;
+  padding-left: 6px;
+}
+#loading-container #top-load-section #top-content #statistics #rupee img {
+  width: 14px;
+  position: relative;
+  right: 2px;
+  height: auto;
+  padding-left: 8px;
+}
+#loading-container #top-load-section #top-content #divine-beasts {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+}
+#loading-container #top-load-section #top-content #divine-beasts #vah-medoh {
+  height: 55px;
+  width: auto;
+}
+#loading-container #top-load-section #top-content #divine-beasts #vah-naboris {
+  height: 55px;
+  width: auto;
+}
+#loading-container #top-load-section #top-content #divine-beasts #vah-rudania {
+  height: 55px;
+  width: auto;
+}
+#loading-container #top-load-section #top-content #divine-beasts #vah-ruta {
+  height: 55px;
+  width: auto;
+}
 #loading-container #bottom-load-section {
   height: 62%;
   background-color: #000000;
