@@ -28,7 +28,7 @@ body, html {
   float: right;
   text-align: right;
   height: 100%;
-  padding-right: 40px;
+  padding: 25px 40px 0 0;
 }
 #loading-container #top-load-section #top-content #statistics #hearts {
   width: 290px;
@@ -84,6 +84,44 @@ body, html {
   height: 62%;
   background-color: #000000;
   color: #fff;
+}
+#loading-container #bottom-load-section #bottom-content {
+  height: 100%;
+  position: relative;
+}
+#loading-container #bottom-load-section #bottom-content #loading-description {
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  max-width: 50%;
+}
+#loading-container #bottom-load-section #bottom-content #next-tip {
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+#loading-container #bottom-load-section #bottom-content #next-tip #a-button {
+  display: inline;
+  height: 18px;
+  width: auto;
+}
+#loading-container #bottom-load-section #bottom-content #loading-logo img {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 200px;
+  height: auto;
+}
+#loading-container #bottom-load-section #bottom-content #loading-logo #load-logo {
+  display: block;
+  z-index: 8;
+}
+#loading-container #bottom-load-section #bottom-content #loading-logo #load-overlay {
+  display: block;
+  z-index: 9;
+  background: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

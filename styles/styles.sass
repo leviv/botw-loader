@@ -14,6 +14,7 @@ body, html
   #top-load-section
     height: 38%
     background-color: $primary-color
+    // Content for the top part of the loading screen
     #top-content
       height: 100%
       position: relative
@@ -21,11 +22,12 @@ body, html
         position: absolute
         bottom: 0
         left: 40px
+      // hearts, stamina, koroks, shrines, rupees
       #statistics
         float: right
         text-align: right
         height: 100%
-        padding-right: 40px
+        padding: 25px 40px 0 0
         #hearts
           width: 290px
           margin: 0 !important
@@ -49,6 +51,7 @@ body, html
           right: 2px
           height: auto
           padding-left: 8px
+      // Placement of the divine beast icons
       #divine-beasts
         position: absolute
         bottom: 0
@@ -66,9 +69,41 @@ body, html
           height: 55px
           width: auto
 
-
-
+  // Styles for the bottom of the loading screen
   #bottom-load-section
     height: 62%
     background-color: $secondary-color
     color: #fff
+    #bottom-content
+      height: 100%
+      position: relative
+      #loading-description
+        padding-top: 10px
+        position: absolute
+        top: 0
+        left: 40px
+        max-width: 50%
+      #next-tip
+        padding-top: 10px
+        position: absolute
+        top: 0
+        right: 40px
+        #a-button
+          display: inline
+          height: 18px
+          width: auto
+      // LoZ botw logo in the bottom right
+      #loading-logo
+        img
+          position: absolute
+          bottom: 40px
+          right: 40px
+          width: 200px
+          height: auto
+        #load-logo
+          display: block
+          z-index: 8
+        #load-overlay
+          display: block
+          z-index: 9
+          background: #fff
