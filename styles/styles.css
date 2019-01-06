@@ -1,3 +1,13 @@
+@font-face {
+  font-family: CalamityRegular;
+  src: url("../fonts/Calamity-Regular.eot");
+  src: url("../fonts/Calamity-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Calamity-Regular.woff") format("woff"), url("../fonts/Calamity-Regular.ttf") format("truetype"), url("../fonts/Calamity-Regular.svg#svgFontName") format("svg");
+}
+@font-face {
+  font-family: CalamityBold;
+  src: url("../fonts/Calamity-Bold.eot");
+  src: url("../fonts/Calamity-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Calamity-Bold.woff") format("woff"), url("../fonts/Calamity-Bold.ttf") format("truetype"), url("../fonts/Calamity-Bold.svg#svgFontName") format("svg");
+}
 body, html {
   height: 100%;
   width: 100%;
@@ -22,42 +32,52 @@ body, html {
 #loading-container #top-load-section #top-content #loading-title {
   position: absolute;
   bottom: 0;
-  left: 40px;
+  left: 48px;
+  font-family: CalamityBold;
 }
 #loading-container #top-load-section #top-content #statistics {
   float: right;
   text-align: right;
   height: 100%;
-  padding: 25px 40px 0 0;
+  padding: 33px 48px 0 0;
+}
+#loading-container #top-load-section #top-content #statistics span {
+  font-size: 14px;
+  font-family: CalamityRegular;
 }
 #loading-container #top-load-section #top-content #statistics #hearts {
-  width: 290px;
+  width: 260px;
   margin: 0 !important;
 }
 #loading-container #top-load-section #top-content #statistics #hearts img {
-  width: 15px;
+  width: 13px;
   height: auto;
 }
 #loading-container #top-load-section #top-content #statistics #stamina img {
-  width: 18px;
-  height: auto;
+  height: 20px;
+  width: auto;
 }
-#loading-container #top-load-section #top-content #statistics #spirit-orbs img, #loading-container #top-load-section #top-content #statistics #shrine img {
-  width: 20px;
-  height: auto;
-  padding-left: 5px;
+#loading-container #top-load-section #top-content #statistics #spirit-orbs img {
+  height: 24px;
+  width: auto;
+  padding-left: 4px;
+}
+#loading-container #top-load-section #top-content #statistics #shrine img {
+  height: 26px;
+  width: auto;
+  padding-left: 4px;
 }
 #loading-container #top-load-section #top-content #statistics #korok img {
-  width: 18px;
-  height: auto;
+  height: 18px;
+  width: auto;
   padding-left: 6px;
 }
 #loading-container #top-load-section #top-content #statistics #rupee img {
-  width: 14px;
+  height: 22px;
   position: relative;
   right: 2px;
-  height: auto;
-  padding-left: 8px;
+  width: auto;
+  padding-left: 9px;
 }
 #loading-container #top-load-section #top-content #divine-beasts {
   position: absolute;
@@ -93,14 +113,16 @@ body, html {
   padding-top: 10px;
   position: absolute;
   top: 0;
-  left: 40px;
+  left: 48px;
   max-width: 50%;
+  font-family: CalamityBold;
 }
 #loading-container #bottom-load-section #bottom-content #next-tip {
   padding-top: 10px;
   position: absolute;
   top: 0;
   right: 40px;
+  font-family: CalamityBold;
 }
 #loading-container #bottom-load-section #bottom-content #next-tip #a-button {
   display: inline;
@@ -109,9 +131,9 @@ body, html {
 }
 #loading-container #bottom-load-section #bottom-content #loading-logo img {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
-  width: 200px;
+  bottom: 34px;
+  right: 48px;
+  width: 221px;
   height: auto;
 }
 #loading-container #bottom-load-section #bottom-content #loading-logo #load-logo {
