@@ -5,7 +5,7 @@ $(document).ready(function(){
   // If the a key is pressed
   $(document).keypress(function(e) {
     // Check the javascript key code for 'a', 'A', or enter
-    if(e.which == 65 || e.which == 13 || e.which == 97) { 
+    if(e.which == 65 || e.which == 13 || e.which == 97) {
       aPressed();
     }
   });
@@ -15,9 +15,71 @@ $(document).ready(function(){
 function aPressed() {
   // Check to see if pressing a is valid at this point
   if( $("#next-tip").css('opacity') == '1') {
-    alert("hey!");
-  }
 
+    // Animate the 'next tip' dialouge fading out
+    $("#next-tip").animate({
+      opacity: "0",
+    }, {
+      duration: 500,
+      easing: 'linear'
+    });
+
+    // Animate the 'tip' description fading out
+    $("#loading-description").animate({
+      opacity: "0",
+      left: "56px"
+    }, {
+      duration: 500,
+      easing: 'linear'
+    });
+
+    // Animate the 'tip' fading out
+    $("#loading-title").animate({
+      opacity: "0",
+      left: "56px"
+    }, {
+      duration: 500,
+      easing: 'linear'
+    });
+
+    //Change the css so the tip appears to be coming from the left again
+    $("#loading-description").queue(function (next) {
+      $(this).css('left', '40px');
+      next();
+    });
+
+    $("#loading-title").queue(function (next) {
+      $(this).css('left', '40px');
+      next();
+    });
+
+    // Animate the 'tip' description fading in
+    $("#loading-description").animate({
+      opacity: "1",
+      left: "48px"
+    }, {
+      duration: 500,
+      easing: 'linear'
+    });
+
+    // Animate the 'tip' fading in
+    $("#loading-title").animate({
+      opacity: "1",
+      left: "48px"
+    }, {
+      duration: 500,
+      easing: 'linear'
+    });
+
+    // Animate the 'next tip' dialouge fading in
+    $("#next-tip").delay(2000).animate({
+      opacity: "1",
+    }, {
+      duration: 500,
+      easing: 'linear'
+    });
+
+  }
 }
 
 // function to handle all of the opening animations

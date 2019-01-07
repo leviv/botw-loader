@@ -22,8 +22,17 @@ body, html
   margin: 0
   padding: 0
 
+// Some styles to show the content underneath
+#content
+  width: 100%
+  height: auto
+
 // Start the styles for the loading screen
 #loading-container
+  background-color: $secondary-color
+  position: fixed
+  height: 100%
+  width: 100%
   #top-wipe
     position: absolute
     top: 0
@@ -123,8 +132,8 @@ body, html
           width: auto
           padding-left: 28px
           padding-bottom: 8px
-          animation: vah-rudania 5s infinite
-          -webkit-animation: vah-rudania 5s infinite
+          animation: vah-rudania 5.5s infinite
+          -webkit-animation: vah-rudania 5.5s infinite
         #vah-ruta
           height: 55px
           width: auto
