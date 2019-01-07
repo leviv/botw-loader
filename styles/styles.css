@@ -47,7 +47,7 @@ body, html {
   position: absolute;
   bottom: 0;
   left: 40px;
-  font-size: 20px;
+  font-size: 18px;
   padding-bottom: 10px;
   font-family: CalamityBold;
 }
@@ -112,26 +112,38 @@ body, html {
 }
 #loading-container #top-load-section #top-content #divine-beasts img {
   vertical-align: bottom;
+  position: relative;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-medoh {
   height: 55px;
   width: auto;
   padding-left: 28px;
+  padding-bottom: 2px;
+  bottom: 5px;
+  animation: vah-medoh 4s infinite;
+  -webkit-animation: vah-medoh 5s infinite;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-naboris {
   height: 55px;
   width: auto;
   padding-left: 26px;
+  animation: vah-naboris 2s infinite;
+  -webkit-animation: vah-naboris 2s infinite;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-rudania {
   height: 55px;
   width: auto;
   padding-left: 28px;
+  padding-bottom: 8px;
+  animation: vah-rudania 5s infinite;
+  -webkit-animation: vah-rudania 5s infinite;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-ruta {
   height: 55px;
   width: auto;
   padding-left: 10px;
+  animation: vah-ruta 3s infinite;
+  -webkit-animation: vah-ruta 3s infinite;
 }
 #loading-container #bottom-load-section {
   height: 62%;
@@ -150,7 +162,7 @@ body, html {
   top: 0;
   left: 40px;
   max-width: 50%;
-  font-size: 18px;
+  font-size: 16px;
   font-family: CalamityBold;
   line-height: 1.5em;
 }
@@ -238,7 +250,6 @@ body, html {
   left: 7px;
 }
 
-/* Safari 4.0 - 8.0 */
 @-webkit-keyframes tri-load {
   0% {
     transform: scale(1);
@@ -259,6 +270,230 @@ body, html {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes vah-ruta {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  15% {
+    bottom: 4px;
+    right: 4px;
+  }
+  30% {
+    right: 8px;
+    bottom: 0;
+  }
+  60% {
+    right: 8px;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+@-webkit-keyframes vah-ruta {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  15% {
+    bottom: 4px;
+    right: 4px;
+  }
+  30% {
+    right: 8px;
+    bottom: 0;
+  }
+  60% {
+    right: 8px;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+@keyframes vah-rudania {
+  0% {
+    right: 0;
+  }
+  15% {
+    right: 4px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  20% {
+    right: 4px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35% {
+    right: 8px;
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  40% {
+    right: 8px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    right: 0;
+  }
+}
+@-webkit-keyframes vah-rudania {
+  0% {
+    right: 0;
+  }
+  15% {
+    right: 4px;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  20% {
+    right: 4px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  35% {
+    right: 8px;
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  40% {
+    right: 8px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes vah-naboris {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  15% {
+    bottom: 4px;
+    right: 4px;
+  }
+  30% {
+    right: 8px;
+    bottom: 0;
+  }
+  35% {
+    right: 8px;
+    bottom: 2px;
+  }
+  40% {
+    right: 8px;
+    bottom: 0;
+  }
+  43% {
+    right: 8px;
+    bottom: 1px;
+  }
+  46% {
+    right: 8px;
+    bottom: 0;
+  }
+  60% {
+    right: 8px;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+@-wenkit-keyframes vah-naboris {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  15% {
+    bottom: 4px;
+    right: 4px;
+  }
+  30% {
+    right: 8px;
+    bottom: 0;
+  }
+  35% {
+    right: 8px;
+    bottom: 2px;
+  }
+  40% {
+    right: 8px;
+    bottom: 0;
+  }
+  43% {
+    right: 8px;
+    bottom: 1px;
+  }
+  46% {
+    right: 8px;
+    bottom: 0;
+  }
+  60% {
+    right: 8px;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+@keyframes vah-medoh {
+  0% {
+    bottom: 5px;
+    right: 0;
+  }
+  20% {
+    bottom: 2px;
+    right: 6px;
+  }
+  40% {
+    bottom: 2px;
+    right: 12px;
+  }
+  60% {
+    bottom: 5px;
+    right: 12px;
+  }
+  80% {
+    bottom: 2px;
+    right: 6px;
+  }
+  100% {
+    bottom: 5px;
+    right: 0;
+  }
+}
+@-webkit-keyframes vah-medoh {
+  0% {
+    bottom: 5px;
+    right: 0;
+  }
+  20% {
+    bottom: 2px;
+    right: 6px;
+  }
+  40% {
+    bottom: 2px;
+    right: 12px;
+  }
+  60% {
+    bottom: 5px;
+    right: 12px;
+  }
+  80% {
+    bottom: 2px;
+    right: 6px;
+  }
+  100% {
+    bottom: 5px;
+    right: 0;
   }
 }
 
