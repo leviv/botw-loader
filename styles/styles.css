@@ -19,7 +19,14 @@ body, html {
 }
 
 #loading-container {
+  background-color: #000000;
   height: 100%;
+}
+#loading-container #top-wipe {
+  position: absolute;
+  width: 150px;
+  height: 38%;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), red);
 }
 #loading-container #top-load-section {
   height: 38%;
@@ -33,25 +40,41 @@ body, html {
   position: absolute;
   bottom: 0;
   left: 48px;
+  font-size: 20px;
+  padding-bottom: 10px;
   font-family: CalamityBold;
 }
 #loading-container #top-load-section #top-content #statistics {
   float: right;
   text-align: right;
   height: 100%;
-  padding: 33px 48px 0 0;
+  padding: 33px 45px 0 0;
 }
-#loading-container #top-load-section #top-content #statistics span {
-  font-size: 14px;
+#loading-container #top-load-section #top-content #statistics .statistic {
   font-family: CalamityRegular;
+  text-align: right;
+  line-height: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: row;
+}
+#loading-container #top-load-section #top-content #statistics .statistic .stat-img-con {
+  text-align: center;
+  width: 35px;
 }
 #loading-container #top-load-section #top-content #statistics #hearts {
   width: 260px;
+  padding-right: 8px;
   margin: 0 !important;
 }
 #loading-container #top-load-section #top-content #statistics #hearts img {
   width: 13px;
   height: auto;
+}
+#loading-container #top-load-section #top-content #statistics #stamina {
+  padding-right: 6px;
 }
 #loading-container #top-load-section #top-content #statistics #stamina img {
   height: 20px;
@@ -60,45 +83,46 @@ body, html {
 #loading-container #top-load-section #top-content #statistics #spirit-orbs img {
   height: 24px;
   width: auto;
-  padding-left: 4px;
 }
 #loading-container #top-load-section #top-content #statistics #shrine img {
   height: 26px;
   width: auto;
-  padding-left: 4px;
 }
 #loading-container #top-load-section #top-content #statistics #korok img {
   height: 18px;
   width: auto;
-  padding-left: 6px;
 }
 #loading-container #top-load-section #top-content #statistics #rupee img {
   height: 22px;
-  position: relative;
-  right: 2px;
   width: auto;
-  padding-left: 9px;
 }
 #loading-container #top-load-section #top-content #divine-beasts {
   position: absolute;
   bottom: 0;
-  right: 40px;
+  right: 45px;
+}
+#loading-container #top-load-section #top-content #divine-beasts img {
+  vertical-align: bottom;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-medoh {
   height: 55px;
   width: auto;
+  padding-left: 28px;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-naboris {
   height: 55px;
   width: auto;
+  padding-left: 26px;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-rudania {
   height: 55px;
   width: auto;
+  padding-left: 28px;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-ruta {
   height: 55px;
   width: auto;
+  padding-left: 10px;
 }
 #loading-container #bottom-load-section {
   height: 62%;
@@ -110,19 +134,26 @@ body, html {
   position: relative;
 }
 #loading-container #bottom-load-section #bottom-content #loading-description {
-  padding-top: 10px;
+  padding-top: 13px;
   position: absolute;
   top: 0;
   left: 48px;
   max-width: 50%;
+  font-size: 18px;
   font-family: CalamityBold;
+  line-height: 1.5em;
 }
 #loading-container #bottom-load-section #bottom-content #next-tip {
   padding-top: 10px;
   position: absolute;
   top: 0;
-  right: 40px;
+  right: 50px;
   font-family: CalamityBold;
+  height: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: row;
 }
 #loading-container #bottom-load-section #bottom-content #next-tip #a-button {
   display: inline;
@@ -144,6 +175,71 @@ body, html {
   display: block;
   z-index: 9;
   background: #fff;
+}
+
+#tri-loader {
+  position: absolute;
+  left: 48px;
+  bottom: 56px;
+}
+#tri-loader .circle {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  position: absolute;
+  animation: tri-load 0.75s infinite;
+  -webkit-animation: tri-load 0.75s infinite;
+}
+#tri-loader #circle1, #tri-loader #circle4, #tri-loader #circle5 {
+  animation-delay: 0.375s;
+  -webkit-animation-delay: 0.375s;
+}
+#tri-loader #circle1 {
+  left: 7px;
+}
+#tri-loader #circle2 {
+  top: 5px;
+}
+#tri-loader #circle3 {
+  top: 5px;
+  left: 14px;
+}
+#tri-loader #circle4 {
+  top: 12px;
+}
+#tri-loader #circle5 {
+  top: 12px;
+  left: 14px;
+}
+#tri-loader #circle6 {
+  top: 17px;
+  left: 7px;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes tri-load {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes tri-load {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
