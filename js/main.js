@@ -65,11 +65,19 @@ $(document).ready(function(){
     easing: 'linear'
   });
 
-  // Animate beasts fading in
+  // Animate the 'next tip' dialouge fading in
   $("#next-tip").delay(4000).animate({
     opacity: "1",
   }, {
     duration: 500,
+    easing: 'linear'
+  });
+
+  // Animate the 'next tip' dialouge fading in
+  $("#split-logo").delay(5000).animate({
+    width: "100%"
+  }, {
+    duration: 6000,
     easing: 'linear'
   });
 });

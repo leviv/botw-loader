@@ -158,19 +158,23 @@ body, html
       // LoZ botw logo in the bottom right
       #loading-logo
         opacity: 0
-        img
+        img, #loading-logo-block
           position: absolute
           bottom: 34px
           right: 48px
           height: 173px
-          width: auto
-        #load-logo
+          width: 221px
+        #loading-logo-block
           display: block
           z-index: 8
+          background: #20221C
+          #split-logo
+            height: 100%
+            width: 0%
+            background-color: $primary-color
         #load-overlay
           display: block
           z-index: 9
-          background: #fff
 
 // CSS for the triforce loading icon
 #tri-loader

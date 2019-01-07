@@ -175,21 +175,26 @@ body, html {
 #loading-container #bottom-load-section #bottom-content #loading-logo {
   opacity: 0;
 }
-#loading-container #bottom-load-section #bottom-content #loading-logo img {
+#loading-container #bottom-load-section #bottom-content #loading-logo img, #loading-container #bottom-load-section #bottom-content #loading-logo #loading-logo-block {
   position: absolute;
   bottom: 34px;
   right: 48px;
   height: 173px;
-  width: auto;
+  width: 221px;
 }
-#loading-container #bottom-load-section #bottom-content #loading-logo #load-logo {
+#loading-container #bottom-load-section #bottom-content #loading-logo #loading-logo-block {
   display: block;
   z-index: 8;
+  background: #20221C;
+}
+#loading-container #bottom-load-section #bottom-content #loading-logo #loading-logo-block #split-logo {
+  height: 100%;
+  width: 0%;
+  background-color: #FDFFE3;
 }
 #loading-container #bottom-load-section #bottom-content #loading-logo #load-overlay {
   display: block;
   z-index: 9;
-  background: #fff;
 }
 
 #tri-loader {
