@@ -148,7 +148,7 @@ body, html {
   padding-top: 13px;
   position: absolute;
   top: 0;
-  left: 48px;
+  left: 40px;
   max-width: 50%;
   font-size: 18px;
   font-family: CalamityBold;
@@ -179,8 +179,8 @@ body, html {
   position: absolute;
   bottom: 34px;
   right: 48px;
-  width: 221px;
-  height: auto;
+  height: 173px;
+  width: auto;
 }
 #loading-container #bottom-load-section #bottom-content #loading-logo #load-logo {
   display: block;
