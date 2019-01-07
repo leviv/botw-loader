@@ -1,11 +1,18 @@
 $(document).ready(function(){
+
+  // Animate the lighter bar expanding when page is loaded
   $("#top-load-section").animate({
-    width: "100%"
+    width: "105%"
   }, {
     duration: 500,
     easing: 'linear'
   });
 
-  $("#top-load-section").delay(1000).css("float", "left");
-  $("#tri-loader").css("display","block").delay(100);
+  // Animate the 'buffer zome' between the lighter bar and
+  $("#top-wipe").animate({
+    left: "-150px"
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 });

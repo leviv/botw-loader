@@ -1,16 +1,19 @@
 $primary-color: #FDFFE3
 $secondary-color: #000000
 
+// Add the light botw font, thanks to /u/75thTrombone for sharing
 @font-face
   font-family: CalamityRegular
   src: url("../fonts/Calamity-Regular.eot")
   src: url("../fonts/Calamity-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Calamity-Regular.woff") format("woff"), url("../fonts/Calamity-Regular.ttf") format("truetype"), url("../fonts/Calamity-Regular.svg#svgFontName") format("svg")
 
+// Add the bold botw font, thanks to /u/75thTrombone for sharing
 @font-face
   font-family: CalamityBold
   src: url("../fonts/Calamity-Bold.eot")
   src: url("../fonts/Calamity-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Calamity-Bold.woff") format("woff"), url("../fonts/Calamity-Bold.ttf") format("truetype"), url("../fonts/Calamity-Bold.svg#svgFontName") format("svg")
 
+// Normalize styles for the document
 body, html
   height: 100%
   width: 100%
@@ -19,37 +22,39 @@ body, html
   margin: 0
   padding: 0
 
-
-
+// Start the styles for the loading screen
 #loading-container
   #top-wipe
     position: absolute
+    top: 0
+    right: 0
     width: 150px
     height: 38%
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1))
-
+    margin-right: -20px
+    background-image: linear-gradient(to right, $secondary-color, $primary-color)
+    transform: skewX(7deg)
   background-color: $secondary-color
   height: 100%
   #top-load-section
-    //width: 0
+    width: 0
     height: 38%
-    //float: right
+    float: right
     background-color: $primary-color
     // Content for the top part of the loading screen
     #top-content
       height: 100%
       position: relative
       #loading-title
-        //opacity: 0
+        opacity: 0
         position: absolute
         bottom: 0
-        left: 48px
+        left: 40px
         font-size: 20px
         padding-bottom: 10px
         font-family: CalamityBold
       // hearts, stamina, koroks, shrines, rupees
       #statistics
-        //opacity: 0
+        opacity: 0
         float: right
         text-align: right
         height: 100%
@@ -92,7 +97,7 @@ body, html
           width: auto
       // Placement of the divine beast icons
       #divine-beasts
-        //opacity: 0
+        opacity: 0
         position: absolute
         bottom: 0
         right: 45px
@@ -120,11 +125,12 @@ body, html
     height: 62%
     background-color: $secondary-color
     color: #fff
+    clear: both
     #bottom-content
       height: 100%
       position: relative
       #loading-description
-        //opacity: 0
+        opacity: 0
         padding-top: 13px
         position: absolute
         top: 0
@@ -134,7 +140,7 @@ body, html
         font-family: CalamityBold
         line-height: 1.5em
       #next-tip
-        //opacity: 0
+        opacity: 0
         padding-top: 10px
         position: absolute
         top: 0
@@ -151,7 +157,7 @@ body, html
           width: auto
       // LoZ botw logo in the bottom right
       #loading-logo
-        //opacity: 0
+        opacity: 0
         img
           position: absolute
           bottom: 34px

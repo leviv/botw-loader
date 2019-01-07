@@ -24,12 +24,18 @@ body, html {
 }
 #loading-container #top-wipe {
   position: absolute;
+  top: 0;
+  right: 0;
   width: 150px;
   height: 38%;
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), red);
+  margin-right: -20px;
+  background-image: linear-gradient(to right, #000000, #FDFFE3);
+  transform: skewX(7deg);
 }
 #loading-container #top-load-section {
+  width: 0;
   height: 38%;
+  float: right;
   background-color: #FDFFE3;
 }
 #loading-container #top-load-section #top-content {
@@ -37,14 +43,16 @@ body, html {
   position: relative;
 }
 #loading-container #top-load-section #top-content #loading-title {
+  opacity: 0;
   position: absolute;
   bottom: 0;
-  left: 48px;
+  left: 40px;
   font-size: 20px;
   padding-bottom: 10px;
   font-family: CalamityBold;
 }
 #loading-container #top-load-section #top-content #statistics {
+  opacity: 0;
   float: right;
   text-align: right;
   height: 100%;
@@ -97,6 +105,7 @@ body, html {
   width: auto;
 }
 #loading-container #top-load-section #top-content #divine-beasts {
+  opacity: 0;
   position: absolute;
   bottom: 0;
   right: 45px;
@@ -128,12 +137,14 @@ body, html {
   height: 62%;
   background-color: #000000;
   color: #fff;
+  clear: both;
 }
 #loading-container #bottom-load-section #bottom-content {
   height: 100%;
   position: relative;
 }
 #loading-container #bottom-load-section #bottom-content #loading-description {
+  opacity: 0;
   padding-top: 13px;
   position: absolute;
   top: 0;
@@ -144,6 +155,7 @@ body, html {
   line-height: 1.5em;
 }
 #loading-container #bottom-load-section #bottom-content #next-tip {
+  opacity: 0;
   padding-top: 10px;
   position: absolute;
   top: 0;
@@ -159,6 +171,9 @@ body, html {
   display: inline;
   height: 18px;
   width: auto;
+}
+#loading-container #bottom-load-section #bottom-content #loading-logo {
+  opacity: 0;
 }
 #loading-container #bottom-load-section #bottom-content #loading-logo img {
   position: absolute;
