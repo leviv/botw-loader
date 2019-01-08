@@ -1,4 +1,12 @@
+// Use the 'tip' data found in data.js
+// Randomly arrange the elements in the array
+data.sort( function() { return 0.5 - Math.random() } );
+var tipCounter = 0;
+
 $(document).ready(function(){
+
+  // Originally set the tip to a random tip from the data
+  changeTip();
 
   introAnimations(); // Play all the opening anitmation
 
@@ -10,6 +18,15 @@ $(document).ready(function(){
     }
   });
 });
+
+//Function to switch out the text in the tip section
+function changeTip(){
+  $("#loading-title h3").text(data[tipCounter][0]);
+  $("#loading-description p").text(data[tipCounter][1]);
+
+  // Increase the tipCounter but make sure we don't go over the array length
+  tipCounter = (tipCounter + 1) % (data.length - 1);
+}
 
 // Function to handle what happens if the a key is pressed
 function aPressed() {
@@ -52,6 +69,9 @@ function aPressed() {
       $(this).css('left', '40px');
       next();
     });
+
+    // Call the changeTip funtion after the animations have finished
+    setTimeout(function() { changeTip(); }, 500);
 
     // Animate the 'tip' description fading in
     $("#loading-description").animate({
