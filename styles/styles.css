@@ -31,15 +31,31 @@ body, html {
   background-color: #000000;
   height: 100%;
 }
-#loading-container #top-wipe {
+#loading-container #end-wipe, #loading-container #top-wipe {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 150px;
   height: 38%;
+}
+#loading-container #end-wipe {
+  background: #000000;
+  display: block;
+  z-index: 99;
+  right: -185px;
+  width: 0;
+  transform: skewX(-7deg);
+}
+#loading-container #top-wipe {
+  right: 0;
   margin-right: -20px;
+  width: 150px;
   background-image: linear-gradient(to right, #000000, #FDFFE3);
   transform: skewX(7deg);
+}
+#loading-container #top-wipe.reverse {
+  background-image: linear-gradient(to right, #FDFFE3, #000000) !important;
+  transform: skewX(-7deg) !important;
+  margin-right: 0;
+  left: auto;
 }
 #loading-container #top-load-section {
   width: 0;

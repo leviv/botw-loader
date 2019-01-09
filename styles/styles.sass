@@ -33,15 +33,28 @@ body, html
   position: fixed
   height: 100%
   width: 100%
-  #top-wipe
+  #end-wipe, #top-wipe
     position: absolute
     top: 0
-    right: 0
-    width: 150px
     height: 38%
+  #end-wipe
+    background: $secondary-color
+    display: block
+    z-index: 99
+    right: -185px
+    width: 0
+    transform: skewX(-7deg)
+  #top-wipe
+    right: 0
     margin-right: -20px
+    width: 150px
     background-image: linear-gradient(to right, $secondary-color, $primary-color)
     transform: skewX(7deg)
+    &.reverse
+      background-image: linear-gradient(to right, $primary-color, $secondary-color) !important
+      transform: skewX(-7deg) !important
+      margin-right: 0
+      left: auto
   background-color: $secondary-color
   height: 100%
   #top-load-section
