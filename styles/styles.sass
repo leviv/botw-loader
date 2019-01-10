@@ -1,5 +1,6 @@
-$primary-color: #FDFFE3
+$primary-color: #fff
 $secondary-color: #000000
+$master-mode: #ff0000
 
 // Add the light botw font, thanks to /u/75thTrombone for sharing
 @font-face
@@ -12,6 +13,12 @@ $secondary-color: #000000
   font-family: CalamityBold
   src: url("../fonts/Calamity-Bold.eot")
   src: url("../fonts/Calamity-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Calamity-Bold.woff") format("woff"), url("../fonts/Calamity-Bold.ttf") format("truetype"), url("../fonts/Calamity-Bold.svg#svgFontName") format("svg")
+
+// Add the title botw font
+@font-face
+  font-family: BotwTitle
+  src: url("../fonts/HyliaSerifBeta-Regular.eot")
+  src: url("../fonts/HyliaSerifBeta-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/HyliaSerifBeta-Regular.woff") format("woff"), url("../fonts/HyliaSerifBeta-Regular.ttf") format("truetype"), url("../fonts/HyliaSerifBeta-Regular.svg#svgFontName") format("svg")
 
 // Normalize styles for the document
 body, html
@@ -27,12 +34,34 @@ body, html
   width: 100%
   height: auto
 
+#loading-container.master-mode
+  #master-text
+    display: block !important
+  #top-load-section
+    background-color: $master-mode !important
+  #split-logo
+    background-color: $master-mode !important
+  #top-wipe
+    background-image: linear-gradient(to right, $secondary-color, $master-mode) !important
+    &.reverse
+      background-image: linear-gradient(to right, $master-mode, $secondary-color) !important
+
 // Start the styles for the loading screen
 #loading-container
   background-color: $secondary-color
   position: fixed
   height: 100%
   width: 100%
+  #master-text
+    display: none
+    position: absolute
+    left: 63px
+    top: 85px
+    font-family: BotwTitle, serif
+    color: $secondary-color
+    font-size: 45px
+    text-transform: capitalize
+    word-spacing: 6px
   #end-wipe, #top-wipe
     position: absolute
     top: 0
@@ -73,7 +102,7 @@ body, html
         left: 40px
         font-size: 18px
         padding-bottom: 10px
-        font-family: CalamityBold
+        font-family: CalamityBold, sans-serif
       // hearts, stamina, koroks, shrines, rupees
       #statistics
         opacity: 0
@@ -82,7 +111,7 @@ body, html
         height: 100%
         padding: 33px 45px 0 0
         .statistic
-          font-family: CalamityRegular
+          font-family: CalamityRegular, sans-serif
           text-align: right
           line-height: 28px
           height: 28px
@@ -171,7 +200,7 @@ body, html
         left: 40px
         max-width: 50%
         font-size: 16px
-        font-family: CalamityBold
+        font-family: CalamityBold, sans-serif
         line-height: 1.5em
       #next-tip
         opacity: 0
@@ -179,7 +208,7 @@ body, html
         position: absolute
         top: 0
         right: 50px
-        font-family: CalamityBold
+        font-family: CalamityBold, sans-serif
         height: 25px
         display: flex
         justify-content: flex-end

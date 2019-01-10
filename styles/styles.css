@@ -8,6 +8,11 @@
   src: url("../fonts/Calamity-Bold.eot");
   src: url("../fonts/Calamity-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Calamity-Bold.woff") format("woff"), url("../fonts/Calamity-Bold.ttf") format("truetype"), url("../fonts/Calamity-Bold.svg#svgFontName") format("svg");
 }
+@font-face {
+  font-family: BotwTitle;
+  src: url("../fonts/HyliaSerifBeta-Regular.eot");
+  src: url("../fonts/HyliaSerifBeta-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/HyliaSerifBeta-Regular.woff") format("woff"), url("../fonts/HyliaSerifBeta-Regular.ttf") format("truetype"), url("../fonts/HyliaSerifBeta-Regular.svg#svgFontName") format("svg");
+}
 body, html {
   height: 100%;
   width: 100%;
@@ -23,6 +28,22 @@ body, html {
   height: auto;
 }
 
+#loading-container.master-mode #master-text {
+  display: block !important;
+}
+#loading-container.master-mode #top-load-section {
+  background-color: #ff0000 !important;
+}
+#loading-container.master-mode #split-logo {
+  background-color: #ff0000 !important;
+}
+#loading-container.master-mode #top-wipe {
+  background-image: linear-gradient(to right, #000000, #ff0000) !important;
+}
+#loading-container.master-mode #top-wipe.reverse {
+  background-image: linear-gradient(to right, #ff0000, #000000) !important;
+}
+
 #loading-container {
   background-color: #000000;
   position: fixed;
@@ -30,6 +51,17 @@ body, html {
   width: 100%;
   background-color: #000000;
   height: 100%;
+}
+#loading-container #master-text {
+  display: none;
+  position: absolute;
+  left: 63px;
+  top: 85px;
+  font-family: BotwTitle, serif;
+  color: #000000;
+  font-size: 45px;
+  text-transform: capitalize;
+  word-spacing: 6px;
 }
 #loading-container #end-wipe, #loading-container #top-wipe {
   position: absolute;
@@ -48,11 +80,11 @@ body, html {
   right: 0;
   margin-right: -20px;
   width: 150px;
-  background-image: linear-gradient(to right, #000000, #FDFFE3);
+  background-image: linear-gradient(to right, #000000, #fff);
   transform: skewX(7deg);
 }
 #loading-container #top-wipe.reverse {
-  background-image: linear-gradient(to right, #FDFFE3, #000000) !important;
+  background-image: linear-gradient(to right, #fff, #000000) !important;
   transform: skewX(-7deg) !important;
   margin-right: 0;
   left: auto;
@@ -61,7 +93,7 @@ body, html {
   width: 0;
   height: 38%;
   float: right;
-  background-color: #FDFFE3;
+  background-color: #fff;
 }
 #loading-container #top-load-section #top-content {
   height: 100%;
@@ -74,7 +106,7 @@ body, html {
   left: 40px;
   font-size: 18px;
   padding-bottom: 10px;
-  font-family: CalamityBold;
+  font-family: CalamityBold, sans-serif;
 }
 #loading-container #top-load-section #top-content #statistics {
   opacity: 0;
@@ -84,7 +116,7 @@ body, html {
   padding: 33px 45px 0 0;
 }
 #loading-container #top-load-section #top-content #statistics .statistic {
-  font-family: CalamityRegular;
+  font-family: CalamityRegular, sans-serif;
   text-align: right;
   line-height: 28px;
   height: 28px;
@@ -188,7 +220,7 @@ body, html {
   left: 40px;
   max-width: 50%;
   font-size: 16px;
-  font-family: CalamityBold;
+  font-family: CalamityBold, sans-serif;
   line-height: 1.5em;
 }
 #loading-container #bottom-load-section #bottom-content #next-tip {
@@ -197,7 +229,7 @@ body, html {
   position: absolute;
   top: 0;
   right: 50px;
-  font-family: CalamityBold;
+  font-family: CalamityBold, sans-serif;
   height: 25px;
   display: flex;
   justify-content: flex-end;
@@ -227,7 +259,7 @@ body, html {
 #loading-container #bottom-load-section #bottom-content #loading-logo #loading-logo-block #split-logo {
   height: 100%;
   width: 0%;
-  background-color: #FDFFE3;
+  background-color: #fff;
 }
 #loading-container #bottom-load-section #bottom-content #loading-logo #load-overlay {
   display: block;

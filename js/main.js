@@ -183,7 +183,7 @@ function introAnimations() {
     $("#split-logo").delay(5000).animate({
       width: "100%"
     }, {
-      duration: 1000,
+      duration: 10000,
       easing: 'linear'
     });
 }
