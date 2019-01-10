@@ -4,6 +4,11 @@ data.sort( function() { return 0.5 - Math.random() } );
 var tipCounter = 0;
 
 $(document).ready(function(){
+  alert(getQueryVariable("mastermode"));
+  if (getQueryVariable("mastermode") === "true"){
+    $("#loading-container").addClass("master-mode");
+  }
+
   // Originally set the tip to a random tip from the data
   changeTip();
 
@@ -106,86 +111,86 @@ function outroAnimations(){
 // function to handle all of the opening animations
 function introAnimations() {
 
-    // Animate the lighter bar expanding when page is loaded
-    $("#top-load-section").animate({
-      width: "105%" // set the width to 105 so there's no gap with the buffer zone
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate the lighter bar expanding when page is loaded
+  $("#top-load-section").animate({
+    width: "105%" // set the width to 105 so there's no gap with the buffer zone
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // get rid of the extra space we created due to the buffer zone
-    $("#top-load-section")
-    .queue(function (next) {
-      $(this).css('width', '100%');
-      next();
-    });
+  // get rid of the extra space we created due to the buffer zone
+  $("#top-load-section")
+  .queue(function (next) {
+    $(this).css('width', '100%');
+    next();
+  });
 
-    // Animate the 'buffer zome' between the lighter bar and
-    $("#top-wipe").animate({
-      left: "-150px"
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate the 'buffer zome' between the lighter bar and
+  $("#top-wipe").animate({
+    left: "-150px"
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // Animate the 'tip' description fading in
-    $("#loading-description").delay(500).animate({
-      opacity: "1",
-      left: "48px"
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate the 'tip' description fading in
+  $("#loading-description").delay(500).animate({
+    opacity: "1",
+    left: "48px"
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // Animate the 'tip' fading in
-    $("#loading-title").delay(600).animate({
-      opacity: "1",
-      left: "48px"
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate the 'tip' fading in
+  $("#loading-title").delay(600).animate({
+    opacity: "1",
+    left: "48px"
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // Animate the logo fading in
-    $("#loading-logo").delay(750).animate({
-      opacity: "1",
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate the logo fading in
+  $("#loading-logo").delay(750).animate({
+    opacity: "1",
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // Animate statistics fading in
-    $("#statistics").delay(1500).animate({
-      opacity: "1",
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate statistics fading in
+  $("#statistics").delay(1500).animate({
+    opacity: "1",
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // Animate beasts fading in
-    $("#divine-beasts").delay(1500).animate({
-      opacity: "1",
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate beasts fading in
+  $("#divine-beasts").delay(1500).animate({
+    opacity: "1",
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // Animate the 'next tip' dialouge fading in
-    $("#next-tip").delay(4000).animate({
-      opacity: "1",
-    }, {
-      duration: 500,
-      easing: 'linear'
-    });
+  // Animate the 'next tip' dialouge fading in
+  $("#next-tip").delay(4000).animate({
+    opacity: "1",
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
 
-    // Animate the 'next tip' dialouge fading in
-    $("#split-logo").delay(5000).animate({
-      width: "100%"
-    }, {
-      duration: 10000,
-      easing: 'linear'
-    });
+  // Animate the 'next tip' dialouge fading in
+  $("#split-logo").delay(5000).animate({
+    width: "100%"
+  }, {
+    duration: 10000,
+    easing: 'linear'
+  });
 }
 
 //Function to switch out the text in the tip section
@@ -269,4 +274,15 @@ function aPressed() {
     });
 
   }
+}
+
+// Helper function to get URL variables from https://css-tricks.com/snippets/javascript/get-url-variables/
+function getQueryVariable(variable){
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
 }
