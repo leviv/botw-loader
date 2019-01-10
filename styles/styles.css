@@ -25,7 +25,10 @@ body, html {
 
 #content {
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-image: url("../img/botw.png");
+  background-size: cover;
+  background-position: center center;
 }
 
 #loading-container.master-mode #master-text {
@@ -42,6 +45,9 @@ body, html {
 }
 #loading-container.master-mode #top-wipe.reverse {
   background-image: linear-gradient(to right, #ff0000, #000000) !important;
+}
+#loading-container.master-mode #top-content #loading-title {
+  background: rgba(255, 0, 0, 0.7) !important;
 }
 
 #loading-container {
@@ -62,6 +68,12 @@ body, html {
   font-size: 45px;
   text-transform: capitalize;
   word-spacing: 6px;
+}
+@media screen and (max-width: 768px) {
+  #loading-container #master-text {
+    left: 40px;
+    font-size: 30px;
+  }
 }
 #loading-container #end-wipe, #loading-container #top-wipe {
   position: absolute;
@@ -107,6 +119,8 @@ body, html {
   font-size: 18px;
   padding-bottom: 10px;
   font-family: CalamityBold, sans-serif;
+  z-index: 12;
+  background: rgba(255, 255, 255, 0.7);
 }
 #loading-container #top-load-section #top-content #statistics {
   opacity: 0;
@@ -170,10 +184,15 @@ body, html {
 #loading-container #top-load-section #top-content #divine-beasts img {
   vertical-align: bottom;
   position: relative;
-}
-#loading-container #top-load-section #top-content #divine-beasts #vah-medoh {
   height: 55px;
   width: auto;
+}
+@media screen and (max-width: 768px) {
+  #loading-container #top-load-section #top-content #divine-beasts img {
+    height: 50px;
+  }
+}
+#loading-container #top-load-section #top-content #divine-beasts #vah-medoh {
   padding-left: 28px;
   padding-bottom: 2px;
   bottom: 5px;
@@ -181,23 +200,17 @@ body, html {
   -webkit-animation: vah-medoh 5s infinite;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-naboris {
-  height: 55px;
-  width: auto;
   padding-left: 26px;
   animation: vah-naboris 2s infinite;
   -webkit-animation: vah-naboris 2s infinite;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-rudania {
-  height: 55px;
-  width: auto;
   padding-left: 28px;
   padding-bottom: 8px;
   animation: vah-rudania 5.5s infinite;
   -webkit-animation: vah-rudania 5.5s infinite;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-ruta {
-  height: 55px;
-  width: auto;
   padding-left: 10px;
   animation: vah-ruta 3s infinite;
   -webkit-animation: vah-ruta 3s infinite;
@@ -244,6 +257,9 @@ body, html {
 #loading-container #bottom-load-section #bottom-content #loading-logo {
   opacity: 0;
 }
+#loading-container #bottom-load-section #bottom-content #loading-logo img {
+  border: 1px solid #000000;
+}
 #loading-container #bottom-load-section #bottom-content #loading-logo img, #loading-container #bottom-load-section #bottom-content #loading-logo #loading-logo-block {
   position: absolute;
   bottom: 34px;
@@ -272,6 +288,8 @@ body, html {
   bottom: 56px;
 }
 #tri-loader .circle {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
   width: 6px;
   height: 6px;
   background-color: #fff;
@@ -280,6 +298,9 @@ body, html {
   position: absolute;
   animation: tri-load 0.75s infinite;
   -webkit-animation: tri-load 0.75s infinite;
+}
+#tri-loader .circle.glow {
+  box-shadow: 0px 0px 20px #fff;
 }
 #tri-loader #circle1, #tri-loader #circle4, #tri-loader #circle5 {
   animation-delay: 0.375s;

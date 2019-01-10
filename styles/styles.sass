@@ -32,7 +32,10 @@ body, html
 // Some styles to show the content underneath
 #content
   width: 100%
-  height: auto
+  height: 100%
+  background-image: url('../img/botw.png')
+  background-size: cover
+  background-position: center center
 
 #loading-container.master-mode
   #master-text
@@ -45,6 +48,8 @@ body, html
     background-image: linear-gradient(to right, $secondary-color, $master-mode) !important
     &.reverse
       background-image: linear-gradient(to right, $master-mode, $secondary-color) !important
+  #top-content #loading-title
+    background: rgba($master-mode, .7) !important
 
 // Start the styles for the loading screen
 #loading-container
@@ -62,6 +67,9 @@ body, html
     font-size: 45px
     text-transform: capitalize
     word-spacing: 6px
+    @media screen and (max-width: 768px)
+      left: 40px
+      font-size: 30px
   #end-wipe, #top-wipe
     position: absolute
     top: 0
@@ -103,6 +111,8 @@ body, html
         font-size: 18px
         padding-bottom: 10px
         font-family: CalamityBold, sans-serif
+        z-index: 12
+        background: rgba( $primary-color, .7 )
       // hearts, stamina, koroks, shrines, rupees
       #statistics
         opacity: 0
@@ -155,30 +165,26 @@ body, html
         img
           vertical-align: bottom
           position: relative
-        #vah-medoh
           height: 55px
           width: auto
+          @media screen and (max-width: 768px)
+            height: 50px
+        #vah-medoh
           padding-left: 28px
           padding-bottom: 2px
           bottom: 5px
           animation: vah-medoh 4s infinite
           -webkit-animation: vah-medoh 5s infinite
         #vah-naboris
-          height: 55px
-          width: auto
           padding-left: 26px
           animation: vah-naboris 2s infinite
           -webkit-animation: vah-naboris 2s infinite
         #vah-rudania
-          height: 55px
-          width: auto
           padding-left: 28px
           padding-bottom: 8px
           animation: vah-rudania 5.5s infinite
           -webkit-animation: vah-rudania 5.5s infinite
         #vah-ruta
-          height: 55px
-          width: auto
           padding-left: 10px
           animation: vah-ruta 3s infinite
           -webkit-animation: vah-ruta 3s infinite
@@ -221,6 +227,8 @@ body, html
       // LoZ botw logo in the bottom right
       #loading-logo
         opacity: 0
+        img
+          border: 1px solid $secondary-color
         img, #loading-logo-block
           position: absolute
           bottom: 34px
@@ -244,8 +252,9 @@ body, html
   position: absolute
   left: 48px
   bottom: 56px
-  //display: none
   .circle
+    transition: all .3s
+    -webkit-transition: all .3s
     width: 6px
     height: 6px
     background-color: #fff
@@ -254,10 +263,11 @@ body, html
     position: absolute
     animation: tri-load .75s infinite
     -webkit-animation: tri-load .75s infinite
+    &.glow
+      box-shadow: 0px 0px 20px $primary-color
   #circle1, #circle4, #circle5
     animation-delay: .375s
     -webkit-animation-delay: .375s
-
   // top circle
   #circle1
     left: 7px

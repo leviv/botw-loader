@@ -4,7 +4,6 @@ data.sort( function() { return 0.5 - Math.random() } );
 var tipCounter = 0;
 
 $(document).ready(function(){
-  alert(getQueryVariable("mastermode"));
   if (getQueryVariable("mastermode") === "true"){
     $("#loading-container").addClass("master-mode");
   }
@@ -20,6 +19,10 @@ $(document).ready(function(){
     if(e.which == 65 || e.which == 13 || e.which == 97) {
       aPressed();
     }
+  });
+
+  $("#loading-container").click(function(){
+    aPressed();
   });
 
   // This waits until the logo has fully loaded
@@ -102,6 +105,9 @@ function outroAnimations(){
     duration: 1000,
     easing: 'linear'
   });
+
+  // Animate the tri-loader animation glow
+  $(".circle").addClass("glow");
 
   // Animate the loading screen disappearing
   $("#loading-container").delay(2000).fadeOut(1000);
