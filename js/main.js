@@ -31,89 +31,6 @@ $(document).ready(function(){
   });
 });
 
-// function to handle all of the closing animations
-function outroAnimations(){
-
-  // Animate the 'next tip' dialouge fading out
-  $("#next-tip").animate({
-    opacity: "0",
-  }, {
-    duration: 500,
-    easing: 'linear'
-  });
-
-  // Animate the 'tip' description fading out
-  $("#loading-description").delay(500).animate({
-    opacity: "0",
-    left: "56px"
-  }, {
-    duration: 500,
-    easing: 'linear'
-  });
-
-  // Animate the 'tip' fading out
-  $("#loading-title").delay(500).animate({
-    opacity: "0",
-    left: "56px"
-  }, {
-    duration: 500,
-    easing: 'linear'
-  });
-
-  //Change the css so the tip appears to be coming from the left again
-  $("#loading-description").queue(function (next) {
-    $(this).css('left', '40px');
-    next();
-  });
-
-  $("#loading-title").queue(function (next) {
-    $(this).css('left', '40px');
-    next();
-  });
-
-  // Edit the attributes for the 'buffer zone' to get it ready to wipe
-  $("#top-wipe").addClass('reverse');
-  $("#top-wipe").css('left', 'auto');
-  $("#top-wipe").css('right', '-150px');
-
-  // Not sure why the width has to be set to +185 instead of +150
-  // It has something to do with the -7deg skewX CSS that the element has on it
-  // But I counldn't figure out why, or how to fix it
-  var width = $('#loading-container').width() + 185;
-
-  // Animate the top bar disappearing
-  $("#end-wipe").delay(500).animate({
-    width: width + "px"
-  }, {
-    duration: 500,
-    easing: 'linear'
-  });
-
-  // Animate the 'buffer zone' between the lighter bar and darker background
-  $("#top-wipe").delay(500).animate({
-    right: "100%",
-    margin: '0 -1px 0 0' // There was a small gap when set to 0
-  }, {
-    duration: 500,
-    easing: 'linear'
-  });
-
-  // Animate the logo fading out
-  $("#loading-logo").delay(250).animate({
-    opacity: "0",
-  }, {
-    duration: 1000,
-    easing: 'linear'
-  });
-
-  // Animate the tri-loader animation glow
-  $(".circle").addClass("glow");
-
-  // Animate the loading screen disappearing
-  $("#loading-container").delay(2000).fadeOut(1000);
-
-}
-
 // function to handle all of the opening animations
 function introAnimations() {
 
@@ -195,6 +112,97 @@ function introAnimations() {
     width: "100%"
   }, {
     duration: 10000,
+    easing: 'linear'
+  });
+}
+
+
+// function to handle all of the closing animations
+function outroAnimations(){
+
+  // Animate the 'next tip' dialouge fading out
+  $("#next-tip").animate({
+    opacity: "0",
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
+
+  // Animate the 'tip' description fading out
+  $("#loading-description").delay(500).animate({
+    opacity: "0",
+    left: "56px"
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
+
+  // Animate the 'tip' fading out
+  $("#loading-title").delay(500).animate({
+    opacity: "0",
+    left: "56px"
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
+
+  //Change the css so the tip appears to be coming from the left again
+  $("#loading-description").queue(function (next) {
+    $(this).css('left', '40px');
+    next();
+  });
+
+  $("#loading-title").queue(function (next) {
+    $(this).css('left', '40px');
+    next();
+  });
+
+  // Edit the attributes for the 'buffer zone' to get it ready to wipe
+  $("#top-wipe").addClass('reverse');
+  $("#top-wipe").css('left', 'auto');
+  $("#top-wipe").css('right', '-150px');
+
+  // Not sure why the width has to be set to +185 instead of +150
+  // It has something to do with the -7deg skewX CSS that the element has on it
+  // But I counldn't figure out why, or how to fix it
+  var width = $('#loading-container').width() + 185;
+
+  // Animate the top bar disappearing
+  $("#end-wipe").delay(500).animate({
+    width: width + "px"
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
+
+  // Animate the 'buffer zone' between the lighter bar and darker background
+  $("#top-wipe").delay(500).animate({
+    right: "100%",
+    margin: '0 -1px 0 0' // There was a small gap when set to 0
+  }, {
+    duration: 500,
+    easing: 'linear'
+  });
+
+  // Animate the logo fading out
+  $("#loading-logo").delay(250).animate({
+    opacity: "0",
+  }, {
+    duration: 1000,
+    easing: 'linear'
+  });
+
+  // Animate the tri-loader animation glow
+  window.setTimeout(function(){$(".circle").addClass("glow");}, 1500);
+
+  // Animate the loading screen disappearing
+  $("#loading-container").delay(2000).fadeOut(1000);
+
+  // Animate the logo fading out
+  $("#content .text").delay(3000).animate({
+    opacity: "1",
+  }, {
+    duration: 1000,
     easing: 'linear'
   });
 }

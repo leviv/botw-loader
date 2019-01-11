@@ -27,8 +27,23 @@ body, html {
   width: 100%;
   height: 100%;
   background-image: url("../img/botw.png");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+}
+#content .text {
+  opacity: 0;
+  font-family: BotwTitle, sans-serif;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #fff;
+}
+#content .text h1 {
+  font-size: 45px;
+}
+#content .text a {
+  color: #fff;
 }
 
 #loading-container.master-mode #master-text {
@@ -201,8 +216,8 @@ body, html {
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-naboris {
   padding-left: 26px;
-  animation: vah-naboris 2s infinite;
-  -webkit-animation: vah-naboris 2s infinite;
+  animation: vah-naboris 1.5s infinite;
+  -webkit-animation: vah-naboris 1.5s infinite;
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-rudania {
   padding-left: 28px;
@@ -212,8 +227,8 @@ body, html {
 }
 #loading-container #top-load-section #top-content #divine-beasts #vah-ruta {
   padding-left: 10px;
-  animation: vah-ruta 3s infinite;
-  -webkit-animation: vah-ruta 3s infinite;
+  animation: vah-ruta 3.3s infinite;
+  -webkit-animation: vah-ruta 3.3s infinite;
 }
 #loading-container #bottom-load-section {
   height: 62%;
@@ -455,30 +470,30 @@ body, html {
   }
   15% {
     bottom: 4px;
-    right: 4px;
+    right: 3px;
   }
   30% {
-    right: 8px;
+    right: 6px;
     bottom: 0;
   }
   35% {
-    right: 8px;
+    right: 6px;
     bottom: 2px;
   }
   40% {
-    right: 8px;
+    right: 6px;
     bottom: 0;
   }
   43% {
-    right: 8px;
+    right: 6px;
     bottom: 1px;
   }
   46% {
-    right: 8px;
+    right: 6px;
     bottom: 0;
   }
   60% {
-    right: 8px;
+    right: 6px;
   }
   100% {
     bottom: 0;
@@ -492,30 +507,30 @@ body, html {
   }
   15% {
     bottom: 4px;
-    right: 4px;
+    right: 3px;
   }
   30% {
-    right: 8px;
+    right: 6px;
     bottom: 0;
   }
   35% {
-    right: 8px;
+    right: 6px;
     bottom: 2px;
   }
   40% {
-    right: 8px;
+    right: 6px;
     bottom: 0;
   }
   43% {
-    right: 8px;
+    right: 6px;
     bottom: 1px;
   }
   46% {
-    right: 8px;
+    right: 6px;
     bottom: 0;
   }
   60% {
-    right: 8px;
+    right: 6px;
   }
   100% {
     bottom: 0;
