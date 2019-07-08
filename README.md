@@ -1,5 +1,5 @@
 # botw-loader
-A clone of the Legend of Zelda, Breath of the Wild loading screen The original loading screen can be seen [here](https://www.youtube.com/watch?v=R138ePN3-9w), and the final version created by me can be seen [here](https://imgur.com/a/SYd2ZWd).
+A clone of the Legend of Zelda, Breath of the Wild loading screen The original loading screen can be seen [here](https://www.youtube.com/watch?v=R138ePN3-9w), and the final version created by me can be seen [here](https://youtu.be/hzD3u5QuVoo).
 
 ## Prerequisites
 In order to compile the styles for this project, you need to have SASS installed.
